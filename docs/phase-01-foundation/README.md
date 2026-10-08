@@ -6,14 +6,14 @@ Prepare a secure, version-controlled development environment for deploying the O
 
 ## Development Environment
 
-* Operating system: Windows 11
-* Terminal: PowerShell
-* AWS Region: us-east-1
-* AWS CLI: 1.41.7
-* Terraform: 1.14.3
-* Git: 2.50.1
-* kubectl: 1.33.0
-* Docker CLI: 29.7.2
+- Operating system: Windows 11
+- Terminal: PowerShell
+- AWS Region: us-east-1
+- AWS CLI: 1.41.7
+- Terraform: 1.14.3
+- Git: 2.50.1
+- kubectl: 1.33.0
+- Docker CLI: 29.7.2
 
 ## Implementation
 
@@ -27,9 +27,9 @@ Confirmed an existing $10 monthly AWS budget.
 
 Configured thresholds identified:
 
-* 85% actual spending
-* 100% actual spending
-* 100% forecasted spending
+- 85% actual spending
+- 100% actual spending
+- 100% forecasted spending
 
 Confirmed an email subscriber for the 85% alert.
 
@@ -60,45 +60,24 @@ Review AWS CLI credential configuration and permissions before provisioning infr
 
 The AWS account, local development tools, and GitHub repository have been prepared for the next implementation phase.
 
-
-
-\## AWS Authentication Security
-
-
+## AWS Authentication Security
 
 AWS CLI v2 was installed and verified.
 
-
-
 An MFA-backed temporary credential profile named
-
 `astronomy-dev` was created using AWS STS GetSessionToken.
-
-
 
 The temporary credentials have a one-hour lifetime.
 
-
-
 AWS authentication was verified using:
-
-
 
 aws sts get-caller-identity --profile astronomy-dev
 
-
-
 Security considerations:
 
-\- Long-lived credentials are not stored in GitHub.
-
-\- Temporary credentials are used for local development.
-
-\- MFA is enabled for the IAM user.
-
-\- AdministratorAccess remains attached and requires
-
-&#x20; future least-privilege improvement.
-
-\- GitHub Actions will use AWS OIDC federation.
-
+- Long-lived credentials are not stored in GitHub.
+- Temporary credentials are used for local development.
+- MFA is enabled for the IAM user.
+- AdministratorAccess remains attached and requires
+  future least-privilege improvement.
+- GitHub Actions will use AWS OIDC federation.
