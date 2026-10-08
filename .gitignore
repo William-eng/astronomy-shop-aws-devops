@@ -21,3 +21,11 @@ crash.*.log
 .idea/
 Thumbs.db
 .DS_Store
+
+# Terraform override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Do not ignore .terraform.lock.hcl
