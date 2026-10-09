@@ -1,18 +1,18 @@
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "Federated": "arn:aws:iam::975050251876:oidc-provider/token.actions.githubusercontent.com"
-      },
-      "Action": "sts:AssumeRoleWithWebIdentity",
-      "Condition": {
-        "StringEquals": {
-          "token.actions.githubusercontent.com:aud": "sts.amazonaws.com",
-          "token.actions.githubusercontent.com:sub": "repo:William-eng/astronomy-shop-aws-devops:ref:refs/heads/main"
-        }
-      }
-    }
-  ]
+    "Version":  "2012-10-17",
+    "Statement":  [
+                      {
+                          "Effect":  "Allow",
+                          "Principal":  {
+                                            "Federated":  "arn:aws:iam::975050251876:oidc-provider/token.actions.githubusercontent.com"
+                                        },
+                          "Action":  "sts:AssumeRoleWithWebIdentity",
+                          "Condition":  {
+                                            "StringEquals":  {
+                                                                 "token.actions.githubusercontent.com:aud":  "sts.amazonaws.com",
+                                                                 "token.actions.githubusercontent.com:sub":  "repo:William-eng@63299223/astronomy-shop-aws-devops@1410555986:ref:refs/heads/main"
+                                                             }
+                                        }
+                      }
+                  ]
 }
