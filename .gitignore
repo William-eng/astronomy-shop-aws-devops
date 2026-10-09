@@ -29,3 +29,6 @@ override.tf.json
 *_override.tf.json
 
 # Do not ignore .terraform.lock.hcl
+
+# Offline deployment validation artifacts
+/work/

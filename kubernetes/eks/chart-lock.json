@@ -1,0 +1,12 @@
+{
+  "chart": "opentelemetry-demo",
+  "chartVersion": "0.42.3",
+  "appVersion": "3.1.0",
+  "url": "https://github.com/open-telemetry/opentelemetry-helm-charts/releases/download/opentelemetry-demo-0.42.3/opentelemetry-demo-0.42.3.tgz",
+  "sha256": "3c16f3549ea86a85145d7b8db507fe171417d95ebbaf52a9d7f1b668d694ad62",
+  "appCommit": "e5552ee25bcede2900d89188f076c464cd73c074",
+  "frontendBuildCommit": "a7da32eafe17bc72a9cfca69f1230dcfc23a73e0",
+  "namespace": "astronomy-shop",
+  "release": "astronomy-shop",
+  "kubernetesVersion": "1.34.0"
+}

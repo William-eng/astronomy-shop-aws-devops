@@ -22,7 +22,9 @@ OpenTelemetry, monitoring, security, and FinOps practices.
 
 ## Project Status
 
-Phase 1: In progress
+Frontend CI/CD: build and ECR push confirmed in recorded pipeline evidence.
+
+Phase 6: EKS deployment preparation and observability baseline statically validated; not deployed. The $10 monthly budget blocks a live EKS environment. See [Phase 6 guide](docs/phase-06-eks-deployment.md) and [image mapping](docs/phase-06-image-map.md).
 
 ## Development Environment
 
