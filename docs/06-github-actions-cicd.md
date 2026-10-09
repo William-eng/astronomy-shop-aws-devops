@@ -1,4 +1,4 @@
-# Phase 5.5 — GitHub Actions CI/CD
+# Phase 5.5 ï¿½ GitHub Actions CI/CD
 
 ## Objective
 Automate frontend Docker image builds and publishing to Amazon ECR.
@@ -30,3 +30,30 @@ A subsequent build attempt encountered a Docker Hub timeout.
 - Validate GitHub Actions execution.
 - Confirm image availability in ECR.
 - Prepare EKS deployment manifests.
+
+## CI/CD Validation â€” Successful
+
+**Commit:** `a7da32e`
+
+**Result:** GitHub Actions successfully built and published the Astronomy Shop frontend Docker image to Amazon ECR.
+
+**Image repository:** `975050251876.dkr.ecr.us-east-1.amazonaws.com/astronomy-shop/frontend`
+
+**Image digest:** `sha256:abfa1fee95bcee4da40f78865026312714f533c009ed9fab479d1a575e6d3c89`
+
+### Issue encountered and resolution
+
+The initial pipeline failed because the GitHub OIDC subject did not match the AWS IAM trust policy.
+
+We inspected the OIDC token claims and updated the IAM trust policy to match the repository's actual identity, retaining the restriction to the `main` branch.
+
+### Outcome
+
+- GitHub Actions can authenticate to AWS without stored AWS access keys.
+- The frontend image builds successfully in GitHub Actions.
+- The image is published to Amazon ECR with an immutable commit-based tag.
+- The pipeline is ready for Kubernetes deployment integration.
+
+### Next phase
+
+Prepare Kubernetes manifests for Astronomy Shop and validate the EKS infrastructure configuration before provisioning.
